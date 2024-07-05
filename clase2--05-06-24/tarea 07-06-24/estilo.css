@@ -1,0 +1,59 @@
+*{
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    font-size: 10px;
+}
+body{
+    padding: 1em;
+}
+.compra{
+    background-color: beige;
+    color: black;
+    margin: 2em;
+    padding: 1em;
+    font-size: large;
+}   
+li{
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-between
+}
+ul{
+    list-style-type: none;
+    width: 100%;
+}
+.input-section{
+    margin-bottom: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+#agregarelemento{
+    margin: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.compra button{
+    padding: 1em;
+    margin-left: 2em;
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    
+}
+.X{
+    display: flex;
+    justify-content: end ;
+}

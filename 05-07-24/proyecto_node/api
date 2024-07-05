@@ -1,0 +1,22 @@
+app.get("/personajes", async (req, res) => {
+  try {
+    const response = await axios.get("https://hp-api.herokuapp.com/api/characters");
+    const characters = response.data;
+    res.render("personajes", { characters });
+  } catch (error) {
+    console.error("Error al obtener personajes", error);
+    res.status(500).send("Error al obtener personajes");
+  }
+});
+// Ruta para mostrar personajes filtrados por casa
+app.get("/personajes/casa/:house", async (req, res) => {
+  const house = req.params.house;
+  try {
+    const response = await axios.get(`https://hp-api.herokuapp.com/api/characters/house/${house}`);
+    const characters = response.data;
+    res.render("personajes-casa", { characters, house });
+  } catch (error) {
+    console.error("Error al obtener personajes", error);
+    res.status(500).send("Error al obtener personajes");
+  }
+});

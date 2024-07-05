@@ -1,0 +1,9 @@
+.header{
+    background-color: gray;
+    border: 2px solid black;
+    color: aliceblue;
+    padding: 2em;
+}
+.header h1{
+    text-align: center;
+}
