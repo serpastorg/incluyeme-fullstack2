@@ -8,7 +8,13 @@
     <h1> Personajes </h1>
     <ul>
       {{#each characters}}
-        <li> {{name}} - {{house}}</li>
+        <li>
+        <div>
+        <div>Nombre: {{name}}</div>
+        <div>Especie: {{species}}</div>
+        <img src={{image}} alt={{name}}/>
+        </div>
+        </li>
       {{/each}}
 
     </ul>

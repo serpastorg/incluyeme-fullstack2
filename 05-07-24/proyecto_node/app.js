@@ -4,6 +4,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 const hbs = require("hbs");
 const uploadRouter = require("./routes/uploadRoutes"); // Importa el router de upload
+const personajes=require('./routes/personajes')
 
 // Cargar variables de entorno
 dotenv.config();
@@ -19,6 +20,8 @@ hbs.registerPartials(path.join(__dirname, "views", "partials"));
 
 // Middleware para manejar rutas de carga de archivos
 app.use("/upload", uploadRouter);
+app.get('/personajes',personajes.personajes)
+app.get('/personajes?name=:name',personajes.personaje)
 
 // Ruta principal
 app.get("/", (req, res) => {
